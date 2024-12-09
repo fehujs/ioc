@@ -1,0 +1,44 @@
+{
+  "name": "@fehujs/ioc",
+  "version": "1.0.0",
+  "description": "IoC container / dependency injection module for fehujs project",
+  "main": "build/index.js",
+  "type": "module",
+  "files": [
+    "./build/**/*",
+    "README.md",
+    "LICENCE"
+  ],
+  "exports": {
+    ".": "./build/index.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "build:types": "tsc -d --declarationDir build --declarationMap --emitDeclarationOnly",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fehujs/ioc.git"
+  },
+  "keywords": [
+    "ioc",
+    "dependency",
+    "injection"
+  ],
+  "author": "Pascal LLeonart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fehujs/ioc/issues"
+  },
+  "homepage": "https://github.com/fehujs/ioc#readme",
+  "devDependencies": {
+    "@fehujs/tsconfig": "^1.0.0",
+    "@types/node": "^22.10.1",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
+}
