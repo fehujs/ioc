@@ -1,6 +1,6 @@
 const esbuild = require("esbuild")
 const { existsSync, rmSync } = require("node:fs")
-
+const pkgjson = require("../package.json")
 
 if (existsSync('build'))
     rmSync('build', { recursive: true })
@@ -14,5 +14,5 @@ esbuild.build({
     format: 'esm',
     sourcemap: true,
     tsconfig: './tsconfig.json',
-    external: [ './node_modules/*' ],
+    external: pkgjson.dependencies ? Object.keys(pkgjson.dependencies) : [],
 }).catch(() => process.exit(1))
