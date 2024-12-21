@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/ioc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "IoC container / dependency injection module for fehujs project",
   "main": "build/index.js",
   "type": "module",
@@ -15,6 +15,7 @@
   "scripts": {
     "build": "node scripts/build.cjs",
     "build:types": "tsc -d --declarationDir build --declarationMap --emitDeclarationOnly",
+    "release": "pnpm build && pnpm build:types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

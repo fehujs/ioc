@@ -18,8 +18,8 @@ function isSubclassOf(childConstructor: Function, parentConstructor: Function): 
 
 async function loadAndResolveControllers() {
     const container = Container.getInstance()
-    const controllersDir = './dist/controllers'
-    const controllerDirForImport = controllersDir.split('/dist').join('')
+    const controllersDir = './build/controllers'
+    const controllerDirForImport = controllersDir.split('/build').join('')
     let resolvedControllers: { [key: string]: BaseController } = {}
 
     return await new Promise<{ [key: string]: BaseController }>(async (resolve) => {
