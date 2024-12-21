@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/ioc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "IoC container / dependency injection module for fehujs project",
   "main": "build/index.js",
   "type": "module",
@@ -35,10 +35,10 @@
   "devDependencies": {
     "@fehujs/tsconfig": "^1.0.0",
     "@types/node": "^22.10.1",
-    "esbuild": "^0.24.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@fehujs/build": "^0.1.0",
     "reflect-metadata": "^0.2.2"
   }
 }
