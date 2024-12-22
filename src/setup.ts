@@ -1,4 +1,8 @@
 import { readdirSync } from 'fs'
+import { join } from 'path'
+import { cwd } from 'process'
+import { pathToFileURL } from 'url'
+
 import { Container } from './container'
 import BaseController from './base-controller'
 
@@ -18,8 +22,9 @@ function isSubclassOf(childConstructor: Function, parentConstructor: Function): 
 
 async function loadAndResolveControllers() {
     const container = Container.getInstance()
-    const controllersDir = './build/controllers'
-    const controllerDirForImport = controllersDir.split('/build').join('')
+    const controllersDir = join(cwd(), "build", "controllers")
+    const controllerDirForImport = pathToFileURL(controllersDir)
+
     let resolvedControllers: { [key: string]: BaseController } = {}
 
     return await new Promise<{ [key: string]: BaseController }>(async (resolve) => {
