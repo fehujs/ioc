@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/ioc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "IoC container / dependency injection module for fehujs project",
   "main": "build/index.js",
   "type": "module",
